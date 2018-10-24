@@ -9,7 +9,7 @@ if (isset($_POST['submit'])){
 	$pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
 	
 } else {
-	header("Location: blog.joshdavis.ca/Blog/signup.php");
+	header("Location: ../signup.php");
 	exit();
 }
 ?>
