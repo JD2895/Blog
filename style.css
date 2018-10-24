@@ -95,6 +95,10 @@ input, select {
 
 /* MY CODE */
 
+a {
+	text-decoration: none;
+}
+
 .main-wrapper{
 	margin: 0 auto;
 	width: 1000px;
@@ -124,4 +128,58 @@ header nav ul li a {
 	font-size: 16px;
 	color: #111;
 	line-height: 63px;
+}
+
+header .nav-login {
+	float: right;
+}
+
+header .nav-login form {
+	float: left;
+	padding-top: 15px;
+}
+
+header .nav-login form input{
+	float: left;
+	width:  140px;
+	height: 30px;
+	padding: 0px 10px;
+	margin-right: 10px;
+	border: none;
+	background-color: #ccc;
+	font-family: arial;
+	font-size: 14px;
+	color: #111;
+	line-height: 30px;
+}
+
+header .nav-login form button{
+	float: left;
+	width:  60px;
+	height: 30px;
+	margin-right: 10px;
+	border: none;
+	background-color: #f3f3f3;
+	font-family: arial;
+	font-size: 14px;
+	color: #111;
+	cursor: pointer;
+}
+
+header .nav-login form button:hover {
+	background-color: #ccc;
+}
+
+header .nav-login a {
+	display: block;
+	width: 60px;
+	height: 60px;
+	float: left;
+	border: none;
+	background-color: #f8f8ff;
+	font-family: arial;
+	font-size: 16px;
+	color: #111;
+	line-height: 63px;
+	cursor: pointer;
 }
