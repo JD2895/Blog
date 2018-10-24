@@ -10,11 +10,12 @@ if (isset($_POST['submit'])){
 	
 	//Error handlers
 	//Check for empty fields
-	if (empty($first) || empty($last) || empty($email) || ||empty($uid) || empty($pwd)){
+	if (empty($first) || empty($last) || empty($email) || empty($uid) || empty($pwd)){
 		header("Location: ../signup.php?signup=empty");
 		exit();
 	} else {
 					header("Location: ../phpdebug.php");
+		
 	}
 	
 } else {
