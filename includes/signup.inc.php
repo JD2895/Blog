@@ -26,7 +26,23 @@ if (isset($_POST['submit'])){
 				header("Location: ../signup.php?signup=email");
 				exit();
 			} else {
+				
+				$sql = 'SELECT * FROM users WHERE user_uid = $uid';
+				$result = mysqli_query($conn, $sql);
+				$resultCheck = mysqli_num_rows($results);
+				
+				if ($resultCheck > 0){					
+					header("Location: ../signup.php?signup=usertaken");
+					exit();
+				} else {
+					//Hashing the password
+					$hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
+					//Insert the user into the database
+					$sql = "INSERT INTO user (user_first_name, user_last_name, user_email, user_uid, user_pwd) VALUES ($first, $last, $email, $uid, $hashedPwd);";
+					$result = mysqli_query($conn, $sql);
 					header("Location: ../phpdebug.php");
+					exit();
+				}
 			}
 		}
 	}
