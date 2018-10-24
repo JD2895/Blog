@@ -22,7 +22,7 @@ session_start();
 			</ul>
 			<div class="nav-login">
 				<?php
-					if (isset($_SESSION['uid'])){
+					if (isset($_SESSION['u_id'])){
 						echo '
 						<form action="includes/logout.inc.php" method="POST">
 							<button type="submit" name="submit">Logout</button>
