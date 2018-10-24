@@ -8,6 +8,7 @@
 		<?php
 			if (isset($_SESSION['u_id'])){
 				echo "You are logged in";
+				echo '<a href="editor.php">Editor</a>';
 			}
 		
 		?>
