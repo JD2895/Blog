@@ -9,7 +9,7 @@ if (isset($_POST['submit'])){
 	
 	//Error handlers
 	//Check if inputs are empty
-	if (empty($uid) || (empty($pwd)) {
+	if (empty($uid) || empty($pwd)) {
 		header("Location: ../index.php?login=empty");
 		exit();
 	} else {
