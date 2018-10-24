@@ -22,7 +22,7 @@ if (isset($_POST['submit'])){
 		} else {
 			
 			//Check if email is valid
-			if (filter_var($email, FILTER_VALIDATE_EMAIL)){
+			if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
 				header("Location: ../signup.php?signup=email");
 				exit();
 			} else {
