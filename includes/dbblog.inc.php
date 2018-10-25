@@ -7,7 +7,7 @@ $dbName = "blog";
 
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 
-$sql = "SET time_zone = timezone;";
+$sql = "SET SESSION time_zone = '-4:00'";
 $result = mysqli_query($conn, $sql);
 
 ?>
