@@ -44,7 +44,10 @@ session_start();
 	</nav>
 </header>
 
-<textarea class="ckeditor" name="editor"></textarea>
+<form action="includes/submit.inc.php" method="POST">
+	<textarea class="ckeditor" name="editor"></textarea>
+	<input type="submit">
+</form>
 
 <?php
 	include_once 'footer.php';
