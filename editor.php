@@ -45,6 +45,7 @@ session_start();
 </header>
 
 <form action="includes/submit.inc.php" method="POST">
+	<input type="text" name="post_title" placeholder="Title">
 	<textarea class="ckeditor" name="editor"></textarea>
 	<button type="submit" name="submit">Save</button>
 </form>
