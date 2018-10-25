@@ -18,12 +18,11 @@ if (isset($_POST['submit'])){
 		$result = mysqli_query($conn, $sql);
 		header("Location: ../editor.php?submit=success");
 		exit();
-		
 	}
 	
 	
 } else {
-	header("Location: ../editor.php?login=error");
+	header("Location: ../editor.php?submit=error");
 	exit();
 }
 
