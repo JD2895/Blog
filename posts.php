@@ -5,10 +5,10 @@
 ?>
 
 <h1> Blog posts </h1>
-<table style="border:2px solid;">
+<table style="border:2px solid; padding:10px;">
 	<?php
 
-		$sql = "SELECT uid, title, date_time FROM posts";
+		$sql = "SELECT post_id, uid, title, date_time FROM posts";
 		$result = mysqli_query($conn, $sql);
 		
 		if ($result == 0){					
@@ -19,9 +19,11 @@
 		while($row = mysqli_fetch_array($result)) {
 		?>
 			<tr>
-				<td><?php echo $row['uid']; ?></td>
-				<td><?php echo $row['title']; ?></td>
-				<td><?php echo $row['date_time']; ?></td>
+				<td><?= $row['uid']; ?></td>
+				<td><?= $row['title']; ?></td>
+				<td><?= $row['date_time']; ?></td>
+				<td><a href="<?= 'update.php?id='.$row['post_id'] ?>">Edit</a></td>
+				<td><a href="<?= 'delete.php?id='.$row['post_id'] ?>">Delete</a></td>
 			</tr>
 		<?php 
 		}
