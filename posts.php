@@ -7,7 +7,7 @@
 <h1> Blog posts </h1>
 <table style="border:2px solid;">
 <?php
-	$sql = "SELECT post_id, uid, title, date_time FROM posts";
+	$sql = "SELECT post_id, uid, title, date_time FROM posts ORDER BY date_time DESC LIMIT 3";
 	$result = mysqli_query($conn, $sql);
 	
 	if ($result == 0){					
