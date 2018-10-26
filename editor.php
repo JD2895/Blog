@@ -44,11 +44,19 @@ session_start();
 	</nav>
 </header>
 
-<form action="includes/submit.inc.php" method="POST">
-	<input type="text" name="post_title" placeholder="Title">
-	<textarea class="ckeditor" name="editor"></textarea>
-	<button type="submit" name="submit">Save</button>
-</form>
+<?php
+	if (isset($_SESSION['u_id'])){
+		echo '
+		<form action="includes/submit.inc.php" method="POST">
+			<input type="text" name="post_title" placeholder="Title">
+			<textarea class="ckeditor" name="editor"></textarea>
+			<button type="submit" name="submit">Save</button>
+		</form>';
+	} else {
+		header("Location: ../index.php?login=false");
+		exit();
+	}
+?>
 
 <?php
 	include_once 'footer.php';
