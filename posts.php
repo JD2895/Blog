@@ -6,6 +6,7 @@
 <h1> Blog posts </h1>
 <table style="border:2px solid;">
 	<?php
+		include_once 'includes/dbblog.inc.php';
 		$sql = "SELECT (title, date_time, uid) FROM posts LIMIT 3;";
 		$result = mysqli_query($conn, $sql);
 		
