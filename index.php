@@ -5,9 +5,10 @@
 <section class="main-container">
 	<div class="main-wrapper">
 		<h2>Home</h2>
+		<a href="posts.php">Posts</a>
 		<?php
 			if (isset($_SESSION['u_id'])){
-				echo "You are logged in";
+				echo "<h3>You are logged in<h3>";
 				echo '<a href="editor.php">Editor</a>';
 			}
 		

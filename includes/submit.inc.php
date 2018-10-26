@@ -2,6 +2,7 @@
 
 session_start();
 
+//Check if 'submit' from previous page
 if (isset($_POST['submit'])){
 	include_once 'dbblog.inc.php';
 	$uid = mysqli_real_escape_string($conn, $_SESSION['u_id']);
@@ -15,13 +16,13 @@ if (isset($_POST['submit'])){
 		exit();
 	} else {
 		//Insert the user into the database
+		
+		//TODO: Change uid to user's actual name
 		$sql = "INSERT INTO posts (uid, date_time, content, title) VALUES ('$uid', now(),'$text', '$title');";
 		$result = mysqli_query($conn, $sql);
 		header("Location: ../editor.php?submit=success");
 		exit();
 	}
-	
-	
 } else {
 	header("Location: ../editor.php?submit=error");
 	exit();

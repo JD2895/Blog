@@ -4,6 +4,8 @@ session_start();
 
 ?>
 
+<!-- header here is modified from 'header.php' to include CKeditor -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +13,8 @@ session_start();
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Base</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<!-- Added CKeditor source -->
 	<script src="ckeditor/ckeditor.js"></script>
 </head>
 <body>
@@ -46,6 +50,7 @@ session_start();
 
 <?php
 	if (isset($_SESSION['u_id'])){
+		//Show editor
 		echo '
 		<form action="includes/submit.inc.php" method="POST">
 			<input type="text" name="post_title" placeholder="Title">
@@ -53,6 +58,7 @@ session_start();
 			<button type="submit" name="submit">Save</button>
 		</form>';
 	} else {
+		//Take unauthorized user back to index
 		header("Location: index.php?login=false");
 		exit();
 	}
