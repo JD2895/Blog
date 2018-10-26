@@ -8,7 +8,7 @@
 <table style="border:2px solid;">
 	<?php
 
-		$sql = "SELECT (uid, title, date_time) FROM posts";
+		$sql = "SELECT uid, title, date_time FROM posts";
 		$result = mysqli_query($conn, $sql);
 		
 		if ($result == 0){					
