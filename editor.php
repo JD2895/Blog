@@ -53,7 +53,7 @@ session_start();
 			<button type="submit" name="submit">Save</button>
 		</form>';
 	} else {
-		header("Location: ../index.php?login=false");
+		header("Location: index.php?login=false");
 		exit();
 	}
 ?>
